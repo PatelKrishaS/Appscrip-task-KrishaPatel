@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState, useEffect } from "react";
 import styles from "../styles/product.module.css";
@@ -20,7 +19,6 @@ const ProductGrid = ({ products }) => {
   const [selectedSort, setSelectedSort] = useState("RECOMMENDED");
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
   const [mobileSortOpen, setMobileSortOpen] = useState(false);
-
 
   return (
     <div>
@@ -118,19 +116,19 @@ const ProductGrid = ({ products }) => {
 
       {/* Mobile filter drawer */}
       {mobileFilterOpen && (
-  <div className={styles.mobileFilterDrawer}>
-    <div className={styles.drawerHeader}>
-      <span>FILTERS</span>
-      <button
-        onClick={() => setMobileFilterOpen(false)}
-        className={styles.closeDrawer}
-      >
-        ✕
-      </button>
-    </div>
-    <FilterSidebar inDrawer={true} />
-  </div>
-)}
+        <div className={styles.mobileFilterDrawer}>
+          <div className={styles.drawerHeader}>
+            <span>FILTERS</span>
+            <button
+              onClick={() => setMobileFilterOpen(false)}
+              className={styles.closeDrawer}
+            >
+              ✕
+            </button>
+          </div>
+          <FilterSidebar inDrawer={true} />
+        </div>
+      )}
 
       {/* Mobile sort dropdown */}
       {mobileSortOpen && (

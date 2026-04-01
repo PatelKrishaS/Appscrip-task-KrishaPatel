@@ -186,13 +186,11 @@ flex: 0 0 auto;
   color: #fff;
 }
 
-/* Social icons */
 .socialIcons {
   display: flex;
   gap: 12px;
 }
 
-/* Payment icons */
 .paymentIcons {
   display: flex;
   gap: 8px;

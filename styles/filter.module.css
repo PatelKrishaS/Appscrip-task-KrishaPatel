@@ -1,8 +1,6 @@
 .sidebar {
   width: 300px;
   min-width: 240px;
-  /* border-top: 1px solid #e0e0e0; */
-  /* padding-top: 24px; */
 }
 
 .customizable {
@@ -13,14 +11,6 @@
   font-weight: 700;
   letter-spacing: 1px;
 }
-
-/* .customizable input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-} */
-
-
 
 .section {
   border-bottom: 1px solid #e0e0e0;
@@ -106,7 +96,6 @@
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
-  /* Crucial for centering the checkmark */
   background-position: center;
   background-repeat: no-repeat;
   transition: background-color 0.2s ease, border-color 0.2s ease;
@@ -130,9 +119,4 @@
   width: 100%;
   min-width: unset;
 }
-  /* .sidebar {
-    display: block; 
-    width: 100%;
-    min-width: unset;
-  } */
 }
