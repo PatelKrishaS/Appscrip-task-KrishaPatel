@@ -1,0 +1,190 @@
+.header {
+  border-bottom: 1px solid #E5E5E5;
+  padding: 0 96px;
+
+   display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.topRow {
+      width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 40px; */
+}
+
+.left,
+.center,
+.right {
+  flex: 1;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.center {
+  justify-content: center;
+}
+
+.right {
+  justify-content: flex-end;
+  gap: 24px;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+}
+
+
+
+.right button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.lang {
+  gap: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+
+.nav {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  height: 24px;
+  margin-bottom: 24px;
+}
+
+.navLink {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.desktopOnly {
+  display: flex;
+}
+
+.mobileOnly {
+  display: none;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.mobileNavLink {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  letter-spacing: 1px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .desktopOnly {
+    display: none !important;
+  }
+
+  .right {
+    gap: 12px;
+  }
+
+  .right button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobileOnly {
+    display: flex !important;
+  }
+
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-top: 1px solid #e0e0e0;
+    gap: 4px;
+    background: #fff;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .header {
+    /* width: 100%; */
+    padding: 0 16px;
+    gap: 0;
+  }
+
+  .topRow {
+    height: 56px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+  }
+
+  .right button:not(.lang) {
+    display: none;
+  }
+
+  .lang {
+    display: none;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+}
