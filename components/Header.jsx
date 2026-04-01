@@ -19,7 +19,6 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.topRow}>
-
         <div className={styles.left}>
           <button
             className={styles.hamburger}
@@ -37,37 +36,50 @@ const Header = () => {
         </div>
 
         <div className={styles.center}>
-          <span className={styles.logo }>LOGO</span>
+          <span className={styles.logo}>LOGO</span>
         </div>
 
         <div className={styles.right}>
-          {/* Desktop only icons */}
-          <button aria-label="heart" className={styles.desktopOnly}>
+          <button aria-label="search" className={styles.searchBtn}>
+            <Image
+              src="/search-normal.svg"
+              width={24}
+              height={24}
+              alt="search products"
+            />
+          </button>
+          <button aria-label="wishlist">
             <Image src="/heart.svg" width={24} height={24} alt="wishlist" />
           </button>
-          <button aria-label="shopping-bag" className={styles.desktopOnly}>
-            <Image src="/shopping-bag.svg" width={24} height={24} alt="shopping cart" />
+          <button aria-label="cart">
+            <Image
+              src="/shopping-bag.svg"
+              width={24}
+              height={24}
+              alt="shopping cart"
+            />
           </button>
-          <button aria-label="profile" className={styles.desktopOnly}>
-            <Image src="/profile.svg" width={24} height={24} alt="user account" />
+          <button aria-label="account" className={styles.hideOnMobile}>
+            <Image
+              src="/profile.svg"
+              width={24}
+              height={24}
+              alt="user account"
+            />
           </button>
-          <button className={`${styles.lang} ${styles.desktopOnly}`} aria-label="language">
+          <button
+            className={`${styles.lang} ${styles.hideOnMobile}`}
+            aria-label="language"
+          >
             ENG
-            <Image src="/arrow-left.svg" width={16} height={16} alt="arrow-left" />
-          </button>
-
-          {/* Mobile only icons */}
-          <button aria-label="search-normal" className={styles.mobileOnly}>
-            <Image src="/search-normal.svg" width={24} height={24} alt="search products" />
-          </button>
-          <button aria-label="heart" className={styles.mobileOnly}>
-            <Image src="/heart.svg" width={24} height={24} alt="wishlist" />
-          </button>
-          <button aria-label="shopping-bag" className={styles.mobileOnly}>
-            <Image src="/shopping-bag.svg" width={24} height={24} alt="shopping cart" />
+            <Image
+              src="/arrow-left.svg"
+              width={16}
+              height={16}
+              alt="arrow-left"
+            />
           </button>
         </div>
-
       </div>
 
       {/* Desktop nav */}
@@ -94,7 +106,6 @@ const Header = () => {
           ))}
         </div>
       )}
-
     </header>
   );
 };

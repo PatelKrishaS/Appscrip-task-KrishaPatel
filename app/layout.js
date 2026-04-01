@@ -12,8 +12,14 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Appscrip Task",
-  description: "Product Listing Page",
+  title: "Discover Our Products | mettā muse",
+  description: "Shop our curated collection of handcrafted products. Find unique items for men, women and kids at mettā muse.",
+  keywords: "handcrafted products, sustainable fashion, metta muse, shop online",
+  openGraph: {
+    title: "Discover Our Products | mettā muse",
+    description: "Shop our curated collection of handcrafted products.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {

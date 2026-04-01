@@ -20,29 +20,39 @@ export default async function Home() {
       const data = await res.json();
       // products = data.products;
 
-
-  products = data.products.filter(
-    (product) =>
-      !product.title.toLowerCase().includes("beef") &&
-      !product.title.toLowerCase().includes("meat") &&
-      !product.title.toLowerCase().includes("egg") &&
-      !product.title.toLowerCase().includes("fish")
-  );
-
-
+      products = data.products.filter(
+        (product) =>
+          !product.title.toLowerCase().includes("beef") &&
+          !product.title.toLowerCase().includes("meat") &&
+          !product.title.toLowerCase().includes("egg") &&
+          !product.title.toLowerCase().includes("fish"),
+      );
     }
   } catch (error) {
     console.error("Failed to fetch products:", error);
   }
   return (
-      <main>
-        <AnnouncementBar/>
-        <Header/>
-        <Hero/>
-        <div className={styles.pageWrapper}>
+    <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Discover Our Products",
+            description:
+              "Shop our curated collection of handcrafted products at mettā muse.",
+            url: "https://appscrip-task-krisha.netlify.app",
+          }),
+        }}
+      />
+      <AnnouncementBar />
+      <Header />
+      <Hero />
+      <div className={styles.pageWrapper}>
         <ProductGrid products={products} />
       </div>
-        <Footer/>
-      </main>
+      <Footer />
+    </main>
   );
 }
