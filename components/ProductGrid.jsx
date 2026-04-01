@@ -20,6 +20,13 @@ const ProductGrid = ({ products }) => {
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
   const [mobileSortOpen, setMobileSortOpen] = useState(false);
 
+  const sortedProducts = [...products].sort((a, b) => {
+  if (selectedSort === "PRICE : HIGH TO LOW") return b.price - a.price;
+  if (selectedSort === "PRICE : LOW TO HIGH") return a.price - b.price;
+  if (selectedSort === "NEWEST FIRST") return b.id - a.id;
+  return 0; // RECOMMENDED / POPULAR — default order
+});
+
   return (
     <div>
       {/* Desktop top bar */}
@@ -162,9 +169,9 @@ const ProductGrid = ({ products }) => {
       <div className={styles.contentRow}>
         {showFilter && <FilterSidebar />}
         <div className={`${styles.grid} ${!showFilter ? styles.gridWide : ""}`}>
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+          {sortedProducts.map((product) => (
+  <ProductCard key={product.id} product={product} />
+))}
         </div>
       </div>
     </div>
